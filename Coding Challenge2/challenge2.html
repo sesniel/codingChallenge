@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Challenge 2</title>
+</head>
+<body>
+
+<script>
+
+	function printNumbers(x){
+
+        if((x % 3) === 0 && (x % 5) === 0){
+            console.log((x+3), "HappyBirthday");
+        }else if((x % 2) === 0 && x <= 50){
+            console.log((x+3), 'Birthday');
+        }else if(x > 50){
+            console.log((x+3), "Happy");
+        }else{
+            console.log((x+3), x);
+        }
+
+	}
+
+	for(let x = 1; x <= 100; x++){
+        printNumbers(x);
+	}
+</script>
+
+</body>
+</html>

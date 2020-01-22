@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Challenge 4</title>
+</head>
+<body>
+
+<script>
+
+	function calculateValidationNumber(num){
+        
+        let value = num;
+        if(value > 9){
+            value = processNumber(num);
+            do{
+                value = processNumber(value);
+            }while(value > 9)
+        }
+        console.log(value);
+
+	}
+    
+    function processNumber(num){
+        
+        let convertedNum = num.toString();
+        let value = 0;
+        for(let x = 0;x < convertedNum.length; x++){
+            value += parseInt(convertedNum[x]);
+        }
+        return value;
+    }
+
+	calculateValidationNumber(1234);
+</script>
+
+</body>
+</html>
